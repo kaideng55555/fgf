@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('assets/street-wall.jpg') center/cover no-repeat;
+}
+.mascots {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 0 5%;
+}
+.mascot {
+  position: relative;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.mascot:hover {
+  transform: scale(1.05);
+}
+.mascot img {
+  width: 100%;
+  display: block;
+}
+.name-tag {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 4px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+.mascot:hover .name-tag {
+  opacity: 1;
+}
